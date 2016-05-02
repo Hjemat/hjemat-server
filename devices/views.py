@@ -1,8 +1,8 @@
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from homeauto_database.models import Device
-from homeauto_database.serializers import DeviceSerializer
+from devices.models import Device
+from devices.serializers import DeviceSerializer
 
 @api_view(['GET', 'POST'])
 def device_list(request, format=None):

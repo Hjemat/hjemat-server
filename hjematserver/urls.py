@@ -1,4 +1,4 @@
-"""homeauto URL Configuration
+"""hjematserver URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
@@ -16,8 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 
 urlpatterns = [
-    url(r'^api\/',       include('homeauto_database.urls')),
-    url(r'^api\/v1\/',   include('homeauto_database.urls')),
-    url(r'^api\/v1\.0\/', include('homeauto_database.urls')),
+    url(r'^api\/',       include('devices.urls')),
+    url(r'^api\/v1\/',   include('devices.urls')),
+    url(r'^api\/v1\.0\/', include('devices.urls')),
 ]
-
