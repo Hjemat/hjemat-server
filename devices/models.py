@@ -3,7 +3,7 @@ from django.contrib.postgres.fields import JSONField
 
 # Create your models here.
 class Device(models.Model):
-	deviceID = models.IntegerField()
+	deviceID = models.IntegerField(primary_key=True)
 	productID = models.IntegerField()
 	values = JSONField()
 

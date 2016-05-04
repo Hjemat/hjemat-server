@@ -4,4 +4,4 @@ from devices.models import Device
 class DeviceSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Device
-		fields = ('id', 'deviceID', 'productID', 'values')
+		fields = ('deviceID', 'productID', 'values')
