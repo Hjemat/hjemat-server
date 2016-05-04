@@ -1,0 +1,14 @@
+server {
+    listen 80 default_server;
+    server_name localhost;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /home/pi/hjemat-server/hjematserver;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/home/pi/hjemat-server/hjematserver.sock;
+    }
+}
