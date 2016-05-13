@@ -7,6 +7,10 @@ class Device(models.Model):
 	productID = models.IntegerField()
 	values = JSONField()
 
+class DeviceCustomization(models.Model):
+	id = models.IntegerField(primary_key=True)
+	name = models.CharField(max_length=32)
+
 class Command(models.Model):
 	deviceID = models.IntegerField()
 	valueID = models.IntegerField()
